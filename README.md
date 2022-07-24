@@ -1,22 +1,22 @@
 # taskuraha.net
-
+<br/>
 Ennen julkaisua:
+<br/>
+<br/>Sivut
+<br/>-Etusivu
+  <br/>Toiminnallisuudet
+  <br/>-Sivun esittely
+  <br/>-Ilmoitusten haku
+  <br/>-Ilmoitukset
+  <br/>-Rekisteröinti/Kirjautuminen
+<br/>-Ilmoita sivu (Kirjautuneet käyttäjät)
+  <br/>-Ilmoituksen luonti
+<br/>-Profiilisivu
+  <br/>-Omat ilmoitukset
+  <br/>-Käyttäjätiedot
+  <br/>-Käyttäjätietojen muokkaaminen/salasanan vaihtaminen
 
-Sivut
--Etusivu
-  Toiminnallisuudet
-  -Sivun esittely
-  -Ilmoitusten haku
-  -Ilmoitukset
-  -Rekisteröinti/Kirjautuminen
--Ilmoita sivu (Kirjautuneet käyttäjät)
-  -Ilmoituksen luonti
--Profiilisivu
-  -Omat ilmoitukset
-  -Käyttäjätiedot
-  -Käyttäjätietojen muokkaaminen/salasanan vaihtaminen
-
-Myöhemmin
--Käyttäjät voivat myös tarjota palvelujaan ilmoituksilla.
--Chatti
--Arvostelut
+<br/>Myöhemmin
+<br/>-Käyttäjät voivat myös tarjota palvelujaan ilmoituksilla.
+<br/>-Chatti
+<br/>-Arvostelut
