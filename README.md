@@ -22,4 +22,4 @@
 <br/>-Arvostelut
 
 **Tietoturva:**
--Huolehdi ja varmista CORS asetukset kuntoon ennen julkaisua.
+<br/>-Huolehdi ja varmista CORS asetukset kuntoon ennen julkaisua.
