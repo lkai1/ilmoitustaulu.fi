@@ -20,3 +20,6 @@
 <br/>-Käyttäjät voivat myös tarjota palvelujaan ilmoituksilla.
 <br/>-Chatti
 <br/>-Arvostelut
+
+**Tietoturva:**
+-Huolehdi ja varmista CORS asetukset kuntoon ennen julkaisua.
