@@ -11,10 +11,19 @@
 <br/>-Rekisteröinti/Kirjautuminen
 <br/>**Ilmoita sivu** (Kirjautuneet käyttäjät)
 <br/>-Ilmoituksen luonti
-<br/>**Profiilisivu**
+<br/>**Profiilisivu** (Kirjautuneet käyttäjät)
 <br/>-Omat ilmoitukset
 <br/>-Käyttäjätiedot
 <br/>-Käyttäjätietojen muokkaaminen/salasanan vaihtaminen
+
+<br/>**Admin-sivut**
+
+<br/>**Etusivu**
+<br/>-Kirjautuminen
+<br/>**Ilmoitukset sivu** (Kirjautuneet käyttäjät)
+<br/>-Ilmoitusten salliminen ja kieltäminen
+<br/>**Käyttäjät sivu** (Kirjautuneet käyttäjät)
+<br/>-Tietoja ja tilastoja käyttäjistä
 
 <br/>**Myöhemmin**
 <br/>-Käyttäjät voivat myös tarjota palvelujaan ilmoituksilla.
