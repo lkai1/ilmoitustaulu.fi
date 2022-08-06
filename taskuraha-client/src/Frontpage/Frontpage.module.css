@@ -1,0 +1,12 @@
+
+.Frontpage {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-height: calc(100vh - 100px);
+}
+
+.mainView {
+    width: calc(100% - 250px);
+    overflow-y: scroll;
+}

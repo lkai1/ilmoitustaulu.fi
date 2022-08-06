@@ -1,0 +1,16 @@
+.Welcome {
+    text-align: center;
+}
+
+.logoContainer {}
+
+.logoImage {}
+
+.logoText {
+    font-weight: bold;
+    font-size: var(--fontSizeLargeHeader);
+}
+
+.welcomeText {
+    font-size: var(--fontSizeHeader);
+}
