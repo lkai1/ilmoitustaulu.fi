@@ -1,0 +1,24 @@
+.main {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorWhite);
+    border: 1px solid var(--colorGrey);
+    border-top-left-radius: var(--borderRadiusBasic);
+    border-top-right-radius: var(--borderRadiusBasic);
+    overflow-y: scroll;
+}
+
+.selection {
+    background-color: var(--colorWhite);
+    cursor: pointer;
+    margin: 3px;
+    border-radius: var(--borderRadiusBasic);
+    padding: 10px;
+    font-size: var(--fontSizeMedium);
+    color: var(--colorBlack);
+}
+
+.selection[is-selected=true] {
+    background-color: var(--colorVeryLightGrey);
+}

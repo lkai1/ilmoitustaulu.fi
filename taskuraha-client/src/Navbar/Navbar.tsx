@@ -1,46 +1,27 @@
-import { useState } from 'react';
-import styles from './Navbar.module.css';
+import SearchMenu from './Components/SearchMenu/SearchMenu';
+import styles from './NavBar.module.css';
+import Divider from '../CommonComponents/UI/Divider/Divider';
+import LoginMenu from '../Login/LoginMenu/LoginMenu';
 
-const Navbar = () => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const [username, setUsername] = useState('');
-	const [password, setPassword] = useState('');
+const NavBar = () => {
+
 	return (
-		<div className={styles['Navbar']}>
-			<div className={styles['logoContainer']}>
-				<p>taskuraha.net</p>
-			</div>
-			<div className={styles['menuContainer']}>
-				<div className={styles['burgerContainer']}
-					onClick={() => { setIsMenuOpen(!isMenuOpen); }}
-				>
-					<span className={styles['burgerLine']}></span>
-					<span className={styles['burgerLine']}></span>
-					<span className={styles['burgerLine']}></span>
+		<div className={styles['main']}>
+			<div className={styles['contentContainer']}>
+				<div className={styles['leftContainer']}>
+					<div className={styles['logoContainer']}>
+						<p className={styles['logoText']}>ilmoitustaulu.fi</p>
+					</div>
+					<SearchMenu />
 				</div>
-				{isMenuOpen ?
-					<div className={styles['menu']}>
-						<input className={styles['input']}
-							placeholder='käyttäjänimi tai sähköposti'
-							type="text"
-							value={username}
-							onChange={(e) => {
-								e.preventDefault();
-								setUsername(e.target.value);
-							}} />
-						<input className={styles['input']}
-							placeholder='salasana'
-							type="password"
-							value={password}
-							onChange={(e) => {
-								e.preventDefault();
-								setPassword(e.target.value);
-							}} />
-						<div className={styles['submitButton']}>Kirjaudu</div>
-					</div> : null}
+				<LoginMenu />
 			</div>
+			<Divider
+				horizontal={true}
+				color={'var(--colorVeryLightGrey)'}
+			/>
 		</div>
 	);
 };
 
-export default Navbar;
+export default NavBar;

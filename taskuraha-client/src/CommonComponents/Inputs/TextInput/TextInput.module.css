@@ -1,0 +1,28 @@
+.main {
+    position: relative;
+}
+
+.input {
+    height: var(--inputHeight);
+    border: 1px solid var(--colorGrey);
+    border-bottom: 0;
+    outline: 0;
+    padding: 10px;
+    width: calc(100% - 22px);
+    font-size: var(--fontSizeMedium);
+}
+
+.input[is-first=true] {
+    height: var(--inputHeight);
+    margin-bottom: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.input[is-last=true] {
+    height: var(--inputHeight);
+    margin-top: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom: 1px solid var(--colorGrey);
+}

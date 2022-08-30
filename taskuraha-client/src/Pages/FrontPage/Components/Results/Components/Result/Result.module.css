@@ -1,0 +1,88 @@
+.main {
+    height: 400px;
+    width: 250px;
+    margin: 20px;
+    border: 1px solid var(--colorGrey);
+    background-color: var(--colorWhite);
+}
+
+.imageContainer {
+    width: 100%;
+    height: 150px;
+    background-color: var(--colorVeryLightGrey);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.infoContainer {
+    margin: 10px;
+}
+
+.typeText {
+    font-size: var(--fontSizeLarge);
+    color: var(--colorDarkGrey);
+    margin: 0;
+}
+
+.locationText {
+    font-size: var(--fontSizeSmall);
+    color: var(--colorGrey);
+    margin: 0;
+    margin-top: 3px;
+}
+
+.priceText {
+    font-size: var(--fontSizeMedium);
+    font-weight: bold;
+    color: var(--colorDarkGrey);
+    margin: 0;
+    margin-top: 8px;
+}
+
+.descriptionTextContainer {
+    position: relative;
+    overflow: hidden;
+    height: 110px;
+    margin: 10px;
+}
+
+.descriptionTextFader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: repeating-linear-gradient(to bottom, rgba(255, 255, 0, 0), rgb(255, 255, 255));
+}
+
+.descriptionText {
+    margin: 0;
+    word-wrap: break-word;
+    font-size: var(--fontSizeMedium);
+    color: var(--colorDarkGrey);
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.leftButtons {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.rightButtons {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}

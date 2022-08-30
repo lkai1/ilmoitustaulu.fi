@@ -1,0 +1,40 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    border-radius: var(--borderRadiusBasic);
+}
+
+.button {
+    padding: var(--paddingBasic);
+    background-color: var(--colorVeryLightGrey);
+    color: var(--colorDarkGrey);
+    font-size: var(--fontSizeMedium);
+    cursor: pointer;
+    border-top: 0.5px solid var(--colorGrey);
+    border-bottom: 0.5px solid var(--colorGrey);
+    border-left: 0.5px solid var(--colorGrey);
+}
+
+.button[is-selected=true] {
+    background-color: var(--colorBrightBlue);
+    color: white;
+}
+
+.button[is-first=true] {
+    border-bottom-left-radius: var(--borderRadiusBasic);
+    border-top-left-radius: var(--borderRadiusBasic);
+}
+
+.button[is-last=true] {
+    border-bottom-right-radius: var(--borderRadiusBasic);
+    border-top-right-radius: var(--borderRadiusBasic);
+    border-right: 0.5px solid var(--colorGrey);
+}
