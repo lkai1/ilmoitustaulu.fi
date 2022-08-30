@@ -1,0 +1,18 @@
+.main {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contentContainer {
+    text-align: center;
+    width: 90%;
+}
+
+.lineText {
+    margin: 5px;
+    font-weight: bold;
+}

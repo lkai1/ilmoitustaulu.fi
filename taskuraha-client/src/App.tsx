@@ -1,13 +1,13 @@
 import styles from './App.module.css';
 import Footer from './Footer/Footer';
-import Frontpage from './Frontpage/Frontpage';
-import Navbar from './Navbar/Navbar';
+import FrontPage from './Pages/FrontPage/FrontPage';
+import NavBar from './NavBar/NavBar';
 
 const App = () => {
 	return (
-		<div className={styles['App']}>
-			<Navbar />
-			<Frontpage />
+		<div className={styles['main']}>
+			<NavBar />
+			<FrontPage />
 			<Footer />
 		</div>
 	);

@@ -1,0 +1,11 @@
+.main {}
+
+.main[is-vertical=true] {
+    height: 98%;
+    width: 2px;
+}
+
+.main[is-horizontal=true] {
+    height: 2px;
+    width: 98%;
+}
