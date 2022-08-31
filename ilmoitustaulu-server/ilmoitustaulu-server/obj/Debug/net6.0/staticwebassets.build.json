@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tKIuOaP6ZKzWs58hwRlxiKvoMNLIUvOy9ShfSqSWh3A=",
+  "Source": "ilmoitustaulu-server",
+  "BasePath": "_content/ilmoitustaulu-server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
