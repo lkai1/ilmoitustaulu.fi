@@ -1,0 +1,22 @@
+.main {
+    width: 90%;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.label {
+    display: inline-block;
+    font-size: var(--fontSizeSmall);
+    color: var(--colorGrey);
+    margin: 10px;
+}
+
+.label[no-values=true] {
+    display: none;
+}
