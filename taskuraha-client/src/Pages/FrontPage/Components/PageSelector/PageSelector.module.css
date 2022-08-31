@@ -23,6 +23,10 @@
     border-left: 0.5px solid var(--colorGrey);
 }
 
+.button:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+}
+
 .button[is-selected=true] {
     background-color: var(--colorBrightBlue);
     color: white;

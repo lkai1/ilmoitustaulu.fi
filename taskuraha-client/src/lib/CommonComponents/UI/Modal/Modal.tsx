@@ -2,7 +2,7 @@ import styles from './Modal.module.css';
 import { Dispatch, SetStateAction, useEffect } from 'react';
 
 interface Props {
-	children: JSX.Element;
+	children: JSX.Element[] | JSX.Element;
 	visibility: boolean;
 	setVisibility: Dispatch<SetStateAction<boolean>>;
 }

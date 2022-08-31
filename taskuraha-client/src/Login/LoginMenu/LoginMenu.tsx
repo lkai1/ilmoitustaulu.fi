@@ -1,11 +1,11 @@
 import styles from './LoginMenu.module.css';
 import LoginIcon from '@mui/icons-material/Login';
 import { useState } from 'react';
-import TextInput from '../../CommonComponents/Inputs/TextInput/TextInput';
-import IconButton from '../../CommonComponents/Buttons/IconButton/IconButton';
-import TextButton from '../../CommonComponents/Buttons/TextButton/TextButton';
-import DropDownMenu from '../../CommonComponents/UI/DropDownMenu/DropDownMenu';
-import BurgerMenuButton from '../../CommonComponents/Buttons/BurgerMenuButton/BurgerMenuButton';
+import TextInput from '../../lib/CommonComponents/Inputs/TextInput/TextInput';
+import IconButton from '../../lib/CommonComponents/Buttons/IconButton/IconButton';
+import TextButton from '../../lib/CommonComponents/Buttons/TextButton/TextButton';
+import DropDownMenu from '../../lib/CommonComponents/UI/DropDownMenu/DropDownMenu';
+import BurgerMenuButton from '../../lib/CommonComponents/Buttons/BurgerMenuButton/BurgerMenuButton';
 
 const LoginMenu = () => {
 
@@ -20,7 +20,7 @@ const LoginMenu = () => {
 				onClickFunction={() => { setIsMenuOpen(!isMenuOpen); }}
 			/>
 			<DropDownMenu
-				horizontalPosition={'-230px'}
+				horizontalPosition={'-220px'}
 				verticalPosition={'15px'}
 				height={'fit-content'}
 				width={'250px'}

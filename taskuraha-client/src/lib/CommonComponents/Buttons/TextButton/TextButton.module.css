@@ -9,6 +9,10 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
+.button:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.03) 0 0);
+}
+
 .label {
     margin: 0;
     font-size: var(--fontSizeMedium);

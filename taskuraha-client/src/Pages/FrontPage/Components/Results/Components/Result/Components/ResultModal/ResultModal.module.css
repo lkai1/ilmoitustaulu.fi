@@ -1,18 +1,46 @@
 .main {
-    height: 400px;
-    width: 250px;
+    position: relative;
+    height: 550px;
+    width: 500px;
     margin: 20px;
-    border: 1px solid var(--colorGrey);
     background-color: var(--colorWhite);
     border-radius: var(--borderRadiusBasic);
+    overflow-y: scroll;
 }
 
 .imageContainer {
+    position: relative;
     width: 100%;
-    height: 150px;
+    height: 230px;
     background-color: var(--colorVeryLightGrey);
     border-top-left-radius: var(--borderRadiusBasic);
     border-top-right-radius: var(--borderRadiusBasic);
+}
+
+.imageNavigationContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.arrowContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 100px;
+    margin: 10px;
+    background-color: var(--colorPastelBlue);
+    cursor: pointer;
+}
+
+.arrowContainer:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
 }
 
 .image {
@@ -22,8 +50,13 @@
 }
 
 .infoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 10px;
 }
+
+.typeAndLocationTextContainer {}
 
 .typeText {
     font-size: var(--fontSizeLarge);
@@ -32,7 +65,20 @@
 }
 
 .locationText {
-    font-size: var(--fontSizeSmall);
+    font-size: var(--fontSizeMedium);
+    color: var(--colorGrey);
+    margin: 0;
+    margin-top: 3px;
+}
+
+.contactTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.contactText {
+    font-size: var(--fontSizeMedium);
     color: var(--colorGrey);
     margin: 0;
     margin-top: 3px;
@@ -42,22 +88,14 @@
     font-size: var(--fontSizeLarge);
     font-weight: bold;
     color: var(--colorBlack);
-    margin: 0;
-    margin-top: 8px;
+    margin: 10px;
+    margin-bottom: 15px;
 }
 
 .descriptionTextContainer {
     position: relative;
     overflow: hidden;
-    height: 110px;
     margin: 10px;
-}
-
-.descriptionTextFader {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-image: repeating-linear-gradient(to bottom, rgba(255, 255, 0, 0), rgb(255, 255, 255));
 }
 
 .descriptionText {
@@ -65,13 +103,20 @@
     word-wrap: break-word;
     font-size: var(--fontSizeMedium);
     color: var(--colorDarkGrey);
+    min-height: 140px;
 }
 
 .buttonsContainer {
+    position: sticky;
+    bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: var(--borderRadiusBasic);
+    width: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 5px;
+    padding: 3px;
 }
 
 .leftButtons {

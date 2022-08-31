@@ -1,7 +1,7 @@
 import styles from './TypeSelection.module.css';
 import { useState } from 'react';
 import CheckBoxSelector
-	from '../../../../../CommonComponents/Inputs/CheckBoxSelector/CheckBoxSelector';
+	from '../../../../../lib/CommonComponents/Inputs/CheckBoxSelector/CheckBoxSelector';
 import Header from '../Header/Header';
 
 const TypeSelection = () => {

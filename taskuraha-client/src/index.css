@@ -13,13 +13,13 @@ body {
 :root {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   /* color */
-  --colorPastelBlue: rgb(108, 167, 255);
+  --colorPastelBlue: rgb(96, 160, 255);
   --colorBrightBlue: rgb(35, 123, 255);
   --colorPastelYellow: rgb(255, 221, 83);
   --colorPastelRed: rgb(255, 65, 87);
   --colorVeryLightGrey: rgb(245, 245, 245);
   --colorGrey: rgb(200, 200, 200);
-  --colorDarkGrey: rgb(50, 50, 50);
+  --colorDarkGrey: rgb(70, 70, 70);
   --colorBlack: rgb(15, 15, 15);
   --colorWhite: rgb(255, 255, 255);
   --shadowBasic: 0 0 5px rgba(0, 0, 0.8, 0.4);
@@ -33,6 +33,8 @@ body {
   --fontSizeSmallIcon: 15px;
   --fontSizeMediumIcon: 18px;
   --fontSizeLargeIcon: 24px;
+  --fontSizeLargerIcon: 32px;
+  --fontSizeLargestIcon: 40px;
   /* size */
   --inputHeight: 25px;
   --paddingBasic: 10px;

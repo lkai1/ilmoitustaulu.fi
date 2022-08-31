@@ -1,12 +1,12 @@
 import styles from './PriceInput.module.css';
 import { useState } from 'react';
 import Header from '../Header/Header';
-import NumberInput from '../../../../../CommonComponents/Inputs/NumberInput/NumberInput';
+import NumberInput from '../../../../../lib/CommonComponents/Inputs/NumberInput/NumberInput';
 
 const PriceInput = () => {
 
-	const [minPrice, setMinPrice] = useState<number>();
-	const [maxPrice, setMaxPrice] = useState<number>();
+	const [minPrice, setMinPrice] = useState<number | string>('');
+	const [maxPrice, setMaxPrice] = useState<number | string>('');
 
 	return (
 		<div className={styles['main']}>

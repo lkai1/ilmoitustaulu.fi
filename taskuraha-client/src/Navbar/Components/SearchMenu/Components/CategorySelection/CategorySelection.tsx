@@ -1,8 +1,10 @@
 import styles from './CategorySelection.module.css';
 import { useState } from 'react';
-import Selector from '../../../../../CommonComponents/Inputs/Selector/Selector';
-import TextInput from '../../../../../CommonComponents/Inputs/TextInput/TextInput';
+import Selector from '../../../../../lib/CommonComponents/Inputs/Selector/Selector';
+import TextInput from '../../../../../lib/CommonComponents/Inputs/TextInput/TextInput';
 import Header from '../Header/Header';
+import DeselectorList
+	from '../../../../../lib/CommonComponents/Inputs/DeselectorList/DeselectorList';
 
 const CategorySelection = () => {
 
@@ -25,11 +27,11 @@ const CategorySelection = () => {
 		values: Array<string | undefined>,
 		filterStr: string
 	) => {
-		return values.filter((value) => {
-			return value
+		return values.filter(value =>
+			value
 				?.toLowerCase()
-				.startsWith(filterStr.toLowerCase());
-		});
+				.startsWith(filterStr.toLowerCase())
+		);
 	};
 
 	return (
@@ -53,6 +55,11 @@ const CategorySelection = () => {
 					/>
 				</div>
 			</div>
+			<DeselectorList
+				label='Kategoriat'
+				values={selectedCategories}
+				setValues={setSelectedCategories}
+			/>
 		</div>
 	);
 };

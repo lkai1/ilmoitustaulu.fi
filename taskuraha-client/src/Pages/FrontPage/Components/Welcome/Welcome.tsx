@@ -9,7 +9,7 @@ const Welcome = () => {
 				<p className={styles['logoText']}>ilmoitustaulu.fi</p>
 			</div>
 			<p className={styles['welcomeText']}>
-				Tervetuloa ilmoitustaulu.fi:hin
+				Koko Suomen ilmoitukset löydät täältä.
 			</p>
 		</div>
 	);

@@ -1,6 +1,6 @@
 import SearchMenu from './Components/SearchMenu/SearchMenu';
 import styles from './NavBar.module.css';
-import Divider from '../CommonComponents/UI/Divider/Divider';
+import Divider from '../lib/CommonComponents/UI/Divider/Divider';
 import LoginMenu from '../Login/LoginMenu/LoginMenu';
 
 const NavBar = () => {

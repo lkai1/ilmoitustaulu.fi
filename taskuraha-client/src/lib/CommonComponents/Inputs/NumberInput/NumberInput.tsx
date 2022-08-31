@@ -2,11 +2,11 @@ import { Dispatch, SetStateAction } from 'react';
 import styles from './NumberInput.module.css';
 
 interface props {
-    value: number | undefined;
-    setValue: Dispatch<SetStateAction<number | undefined>>;
-    placeHolder: string;
-    borderRadiusTop?: boolean;
-    borderRadiusBottom?: boolean;
+	value: number | string;
+	setValue: Dispatch<SetStateAction<number | string>>;
+	placeHolder: string;
+	borderRadiusTop?: boolean;
+	borderRadiusBottom?: boolean;
 }
 
 const NumberInput = ({
@@ -27,7 +27,10 @@ const NumberInput = ({
 				value={value}
 				onChange={(e) => {
 					e.preventDefault();
-					setValue(Number(e.target.value));
+					setValue(Number(e.target.value) < 1 ?
+						''
+						:
+						Number(e.target.value));
 				}} />
 		</div>
 	);

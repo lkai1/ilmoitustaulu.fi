@@ -1,0 +1,16 @@
+.main {}
+
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.label {
+    margin: 0;
+    margin-left: 3px;
+    font-size: var(--fontSizeSmall);
+    color: var(--colorBlack);
+}

@@ -9,6 +9,10 @@
     border: none;
 }
 
+.button:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+}
+
 .button:active {
     box-shadow: none;
 }
