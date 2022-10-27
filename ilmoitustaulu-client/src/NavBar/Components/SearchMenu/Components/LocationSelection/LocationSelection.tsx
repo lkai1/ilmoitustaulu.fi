@@ -8,6 +8,7 @@ import Header from '../Header/Header';
 import IconButton from '../../../../../lib/CommonComponents/Buttons/IconButton/IconButton';
 import DeselectorList
 	from '../../../../../lib/CommonComponents/Inputs/DeselectorList/DeselectorList';
+import Tooltip from '../../../../../lib/CommonComponents/UI/Tooltip/Tooltip';
 
 const LocationSelection = () => {
 
@@ -17,6 +18,7 @@ const LocationSelection = () => {
 		useState<Array<string | undefined>>([]);
 	const [filterStr, setFilterStr] = useState('');
 	const [selectedView, setSelectedView] = useState(0);
+	const [tooltipVisibility, setTooltipVisibility] = useState(false);
 
 	const provinces = [
 		'Kaikki maakunnat',
@@ -117,16 +119,52 @@ const LocationSelection = () => {
 					selectedView={selectedView}
 					setSelectedView={setSelectedView}
 				/>
-				<DeselectorList
+				{/* <DeselectorList
 					label='Maakunnat'
 					values={selectedProvinces}
 					setValues={setSelectedProvinces}
+					valueColor={'black'}
 				/>
 				<DeselectorList
 					label='Kaupungit'
 					values={selectedCities}
 					setValues={setSelectedCities}
-				/>
+					valueColor={'black'}
+				/> */}
+				<Tooltip
+					horizontalPosition={'50px'}
+					verticalPosition={'0px'}
+					onHoverElement={
+						<p
+							style={{
+								backgroundColor: 'var(--colorVeryLightGrey)',
+								padding: '10px',
+								height: 'fit-content',
+								width: 'fit-content',
+								borderRadius: '4px',
+								margin: '10px 0px 10px 0px'
+							}}
+						>
+							Valinnat: {selectedCities.length + selectedProvinces.length}
+						</p>
+					}
+					hasItems={!!(selectedCities.length + selectedProvinces.length)}
+					visibility={tooltipVisibility}
+					setVisibility={setTooltipVisibility}
+				>
+					<DeselectorList
+						label='Maakunnat'
+						values={selectedProvinces}
+						setValues={setSelectedProvinces}
+						valueColor={'white'}
+					/>
+					<DeselectorList
+						label='Kaupungit'
+						values={selectedCities}
+						setValues={setSelectedCities}
+						valueColor={'white'}
+					/>
+				</Tooltip>
 			</div>
 		</div>
 	);

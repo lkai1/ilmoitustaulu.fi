@@ -1,4 +1,4 @@
-import styles from './ResultModal.module.css';
+import styles from './AdModal.module.css';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { Dispatch, SetStateAction } from 'react';
@@ -17,7 +17,7 @@ interface Props {
 	setVisibility: Dispatch<SetStateAction<boolean>>;
 }
 
-const ResultModal = ({
+const AdModal = ({
 	picture,
 	type,
 	location,
@@ -52,11 +52,13 @@ const ResultModal = ({
 							/>
 						</div>
 					</div>
+					<img className={styles['backgroundImage']} src={picture}></img>
 					<img className={styles['image']} src={picture}></img>
 				</div>
+				<p className={styles['typeText']}>{type}</p>
 				<div className={styles['infoContainer']}>
 					<div className={styles['typeAndLocationTextContainer']}>
-						<p className={styles['typeText']}>{type}</p>
+						
 						<p className={styles['locationText']}>
 							{location}
 						</p>
@@ -86,23 +88,24 @@ const ResultModal = ({
 							labelColor={'var(--colorPastelRed)'}
 							onClickFunction={() => { console.log('Suosikki'); }}
 							buttonColor={'var(--colorWhite)'}
-							border={'1px solid var(--colorGrey)'}
+							border={'1px solid var(--colorLightGrey)'}
 							padding={'5px'}
 							margin={'5px'}
 							iconFontSize={'var(--fontSizeMediumIcon)'}
+							title={'Lisää suosikiksi'}
 						/>
 						<IconButton
 							labelIcon={VisibilityOffIcon}
 							labelColor={'var(--colorDarkGrey)'}
 							onClickFunction={() => {
-								console.log('Piilota');
 								setVisibility(false);
 							}}
 							buttonColor={'var(--colorWhite)'}
-							border={'1px solid var(--colorGrey)'}
+							border={'1px solid var(--colorLightGrey)'}
 							padding={'5px'}
 							margin={'5px'}
 							iconFontSize={'var(--fontSizeMediumIcon)'}
+							title={'Piilota'}
 						/>
 					</div>
 				</div>
@@ -111,4 +114,4 @@ const ResultModal = ({
 	);
 };
 
-export default ResultModal;
+export default AdModal;

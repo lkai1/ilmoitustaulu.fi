@@ -1,10 +1,10 @@
-import styles from './Result.module.css';
+import styles from './Ad.module.css';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import OpenInFullIcon from '@mui/icons-material/OpenInFull';
 import { useState } from 'react';
 import IconButton from '../../../../../../lib/CommonComponents/Buttons/IconButton/IconButton';
-import ResultModal from './Components/ResultModal/ResultModal';
+import AdModal from './Components/AdModal/AdModal';
 
 interface Props {
 	picture: string;
@@ -14,7 +14,7 @@ interface Props {
 	description: string;
 }
 
-const Result = ({
+const Ad = ({
 	picture,
 	type,
 	location,
@@ -27,6 +27,7 @@ const Result = ({
 	return (
 		<div className={styles['main']}>
 			<div className={styles['imageContainer']}>
+				<img className={styles['backgroundImage']} src={picture}></img>
 				<img className={styles['image']} src={picture}></img>
 			</div>
 			<div className={styles['infoContainer']}>
@@ -39,7 +40,11 @@ const Result = ({
 			<div className={styles['descriptionTextContainer']}>
 				<div className={styles['descriptionTextFader']}></div>
 				<p className={styles['descriptionText']}>
-					{description}
+					{description}dsfdsfijdshyufkodskfijuds
+					dsfdsfijdshyufkodskfijuds
+					dsfdsfijdshyufkodskfijudsdsfdsfijdshyufkodskfijudsdsfdsfijdshyufkodskfijuds
+					dsfdsfijdshyufkodskfijudsdsfdsfijdshyufkodskfijudsdsfdsfijdshyufkodskfijuds
+					dsfdsfijdshyufkodskfijudsdsfdsfijdshyufkodskfijuds
 				</p>
 			</div>
 			<div className={styles['buttonsContainer']}>
@@ -49,36 +54,39 @@ const Result = ({
 						labelColor={'var(--colorPastelRed)'}
 						onClickFunction={() => { console.log('Suosikki'); }}
 						buttonColor={'var(--colorWhite)'}
-						border={'1px solid var(--colorGrey)'}
+						border={'1px solid var(--colorLightGrey)'}
 						padding={'5px'}
 						margin={'5px'}
 						iconFontSize={'var(--fontSizeMediumIcon)'}
+						title={'Lisää suosikiksi'}
 					/>
 					<IconButton
 						labelIcon={VisibilityOffIcon}
 						labelColor={'var(--colorDarkGrey)'}
 						onClickFunction={() => { console.log('Piilota'); }}
 						buttonColor={'var(--colorWhite)'}
-						border={'1px solid var(--colorGrey)'}
+						border={'1px solid var(--colorLightGrey)'}
 						padding={'5px'}
 						margin={'5px'}
 						iconFontSize={'var(--fontSizeMediumIcon)'}
+						title={'Piilota'}
 					/>
 				</div>
 				<div className={styles['rightButtons']}>
 					<IconButton
 						labelIcon={OpenInFullIcon}
-						labelColor={'var(--colorDarkGrey)'}
+						labelColor={'var(--colorBlack)'}
 						onClickFunction={() => { setIsModalOpen(!isModalOpen); }}
 						buttonColor={'var(--colorWhite)'}
-						border={'1px solid var(--colorGrey)'}
+						border={'1px solid var(--colorLightGrey)'}
 						padding={'5px'}
 						margin={'5px'}
 						iconFontSize={'var(--fontSizeMediumIcon)'}
+						title={'Avaa isompana'}
 					/>
 				</div>
 			</div>
-			<ResultModal
+			<AdModal
 				picture={picture}
 				type={type}
 				location={location}
@@ -91,4 +99,4 @@ const Result = ({
 	);
 };
 
-export default Result;
+export default Ad;

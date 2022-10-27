@@ -1,0 +1,18 @@
+.main {
+    display: none;
+    width: 100%;
+}
+
+.main[is-message=true] {
+    display: inline-block;
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: var(--borderRadiusBasic);
+}
+
+.messageText {
+    margin: 0;
+    color: var(--colorPastelRed);
+    font-size: var(--fontSizeMedium);
+}

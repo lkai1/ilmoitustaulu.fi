@@ -2,13 +2,15 @@ import styles from './ListItem.module.css';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 interface Props {
-    value: string | undefined;
-    onClickFunction: () => void;
+	value: string | undefined;
+	onClickFunction: () => void;
+	labelColor?: string;
 }
 
 const ListItem = ({
 	value,
-	onClickFunction
+	onClickFunction,
+	labelColor,
 }: Props) => {
 
 	return (
@@ -22,7 +24,9 @@ const ListItem = ({
 						cursor: 'pointer'
 					}}
 				/>
-				<p className={styles['label']}>
+				<p className={styles['label']}
+					style={{ color: labelColor }}
+				>
 					{value}
 				</p>
 			</div>

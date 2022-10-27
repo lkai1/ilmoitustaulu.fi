@@ -1,0 +1,24 @@
+.main {
+    position: relative;
+}
+
+.onHoverElement  {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.childrenContainer {
+    display: none;
+}
+
+.childrenContainer[is-visible=true] {
+    transform:translateY(-100%);
+    width: 250px;
+    display: inline-block;
+    position: absolute;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: var(--paddingBasic);
+    border-radius: var(--borderRadiusBasic);
+}

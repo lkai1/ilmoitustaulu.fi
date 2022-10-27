@@ -3,7 +3,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    padding: 20px;
+    box-shadow: var(--shadowBasic);
 }
 
 .buttonsContainer {
@@ -18,9 +19,9 @@
     color: var(--colorDarkGrey);
     font-size: var(--fontSizeMedium);
     cursor: pointer;
-    border-top: 0.5px solid var(--colorGrey);
-    border-bottom: 0.5px solid var(--colorGrey);
-    border-left: 0.5px solid var(--colorGrey);
+    border-top: 0.5px solid var(--colorLightGrey);
+    border-bottom: 0.5px solid var(--colorLightGrey);
+    border-left: 0.5px solid var(--colorLightGrey);
 }
 
 .button:hover {
@@ -29,6 +30,7 @@
 
 .button[is-selected=true] {
     background-color: var(--colorBrightBlue);
+    border: none;
     color: white;
 }
 
@@ -40,5 +42,5 @@
 .button[is-last=true] {
     border-bottom-right-radius: var(--borderRadiusBasic);
     border-top-right-radius: var(--borderRadiusBasic);
-    border-right: 0.5px solid var(--colorGrey);
+    border-right: 0.5px solid var(--colorLightGrey);
 }

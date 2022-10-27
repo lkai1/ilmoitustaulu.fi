@@ -8,11 +8,13 @@ interface Props {
 	buttonColor?: string;
 	labelColor?: string;
 	width?: string;
+	height?: string;
 	border?: string;
 	iconFontSize?: string;
 	margin?: string;
 	labelFontSize?: string;
 	padding?: string;
+	title?: string;
 }
 
 const IconButton = ({
@@ -22,11 +24,13 @@ const IconButton = ({
 	buttonColor,
 	labelColor,
 	width,
+	height,
 	border,
 	iconFontSize,
 	margin,
 	labelFontSize,
-	padding
+	padding,
+	title,
 }: Props) => {
 
 	const LabelIcon = labelIcon;
@@ -37,13 +41,16 @@ const IconButton = ({
 			style={{
 				backgroundColor: buttonColor,
 				width: width,
+				height: height,
 				border: border,
 				margin: margin,
 				padding: padding ? padding : 'var(--paddingBasic)'
 			}}
 			onClick={() => {
 				onClickFunction();
-			}}>
+			}}
+			title={title}
+		>
 			<p className={styles['label']}
 				style={{
 					color: labelColor,

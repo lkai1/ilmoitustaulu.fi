@@ -1,7 +1,7 @@
 import SearchMenu from './Components/SearchMenu/SearchMenu';
 import styles from './NavBar.module.css';
-import Divider from '../lib/CommonComponents/UI/Divider/Divider';
-import LoginMenu from '../Login/LoginMenu/LoginMenu';
+import LoginAndRegisterMenu
+	from '../Auth/Components/LoginAndRegisterMenu/LoginAndRegisterMenu';
 
 const NavBar = () => {
 
@@ -14,12 +14,8 @@ const NavBar = () => {
 					</div>
 					<SearchMenu />
 				</div>
-				<LoginMenu />
+				<LoginAndRegisterMenu />
 			</div>
-			<Divider
-				horizontal={true}
-				color={'var(--colorVeryLightGrey)'}
-			/>
 		</div>
 	);
 };
