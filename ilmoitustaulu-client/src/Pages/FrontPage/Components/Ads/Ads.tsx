@@ -1,17 +1,17 @@
-import Result from './Components/Result/Result';
-import styles from './Results.module.css';
+import Ad from './Components/Ad/Ad';
+import styles from './Ads.module.css';
 import { v4 as uuidv4 } from 'uuid';
 import placeholder from './placeholder.jpg';
 import placeholder2 from './placeholder2.jpg';
 import placeholder3 from './placeholder3.png';
 
-const Results = () => {
-	const results = [0, 0, 0, 0, 0, 0, 0];
+const Ads = () => {
+	const ads = [0, 0, 0, 0, 0, 0, 0];
 	return (
 		<div className={styles['main']}>
-			<div className={styles['resultsContainer']}>
-				{results.map((result, i) => {
-					return <Result key={uuidv4()}
+			<div className={styles['adsContainer']}>
+				{ads.map((ad, i) => {
+					return <Ad key={uuidv4()}
 						picture={i % 3 === 0 ?
 							placeholder3
 							:
@@ -43,4 +43,4 @@ const Results = () => {
 	);
 };
 
-export default Results;
+export default Ads;

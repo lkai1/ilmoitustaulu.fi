@@ -14,7 +14,9 @@ const Modal = ({ children, visibility, setVisibility }: Props) => {
 		const body: HTMLBodyElement | null = document.querySelector('body');
 		if (visibility && body) {
 			body.style.overflowY = 'hidden';
+			body.style.marginRight = '100px';
 		} else if (!visibility && body) {
+			body.style.marginRight = '0px';
 			body.style.overflowY = 'scroll';
 		}
 	}, [visibility]);

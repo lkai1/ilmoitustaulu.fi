@@ -9,12 +9,14 @@ interface Props {
 	values: Array<string | undefined>;
 	setValues: Dispatch<SetStateAction<Array<string | undefined>>>;
 	label?: string;
+	valueColor?: string;
 }
 
 const DeselectorList = ({
 	values,
 	setValues,
-	label
+	label,
+	valueColor,
 }: Props) => {
 
 	return (
@@ -33,6 +35,7 @@ const DeselectorList = ({
 					return <ListItem
 						key={uuidv4()}
 						value={value}
+						labelColor={valueColor}
 						onClickFunction={() => {
 							setValues(values.filter(valueToRemove =>
 								value !== valueToRemove

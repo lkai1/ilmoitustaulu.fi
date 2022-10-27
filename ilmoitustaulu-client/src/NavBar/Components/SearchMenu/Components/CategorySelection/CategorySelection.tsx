@@ -5,12 +5,14 @@ import TextInput from '../../../../../lib/CommonComponents/Inputs/TextInput/Text
 import Header from '../Header/Header';
 import DeselectorList
 	from '../../../../../lib/CommonComponents/Inputs/DeselectorList/DeselectorList';
+import Tooltip from '../../../../../lib/CommonComponents/UI/Tooltip/Tooltip';
 
 const CategorySelection = () => {
 
 	const [selectedCategories, setSelectedCategories] =
 		useState<Array<string | undefined>>([]);
 	const [filterStr, setFilterStr] = useState('');
+	const [tooltipVisibility, setTooltipVisibility] = useState(false);
 
 	const categories = [
 		'Kaikki kategoriat',
@@ -54,12 +56,35 @@ const CategorySelection = () => {
 						width={'100%'}
 					/>
 				</div>
+				<Tooltip
+					horizontalPosition={'50px'}
+					verticalPosition={'0px'}
+					onHoverElement={
+						<p
+							style={{
+								backgroundColor: 'var(--colorVeryLightGrey)',
+								padding: '10px',
+								height: 'fit-content',
+								width: 'fit-content',
+								borderRadius: '4px',
+								margin: '10px 0px 10px 0px'
+							}}
+						>
+							Valinnat: {selectedCategories.length}
+						</p>
+					}
+					hasItems={!!selectedCategories.length}
+					visibility={tooltipVisibility}
+					setVisibility={setTooltipVisibility}
+				>
+					<DeselectorList
+						label='Kategoriat'
+						values={selectedCategories}
+						setValues={setSelectedCategories}
+					/>
+				</Tooltip>
 			</div>
-			<DeselectorList
-				label='Kategoriat'
-				values={selectedCategories}
-				setValues={setSelectedCategories}
-			/>
+			
 		</div>
 	);
 };
