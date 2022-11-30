@@ -5,6 +5,7 @@
     background-color: var(--colorWhite);
     border-radius: var(--borderRadiusBasic);
     overflow: hidden;
+    margin: 15px;
 }
 
 .imageContainer {
@@ -49,7 +50,7 @@
 .priceText {
     font-size: var(--fontSizeLarge);
     font-weight: bold;
-    color: var(--colorBlack);
+    color: var(--colorLightBlack);
     margin: 0;
     margin-top: 8px;
 }

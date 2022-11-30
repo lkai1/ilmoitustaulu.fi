@@ -16,7 +16,7 @@ const LoginAndRegisterMenu = () => {
 		<div className={styles['main']}>
 			<DropDownMenu
 				menuButton={<BurgerMenuButton
-					lineColor={'var(--colorBlack)'}
+					lineColor={'var(--colorLightBlack)'}
 					onClickFunction={() => {
 						setIsMenuOpen(!isMenuOpen);
 					}}

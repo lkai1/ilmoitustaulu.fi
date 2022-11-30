@@ -17,7 +17,7 @@
     border-radius: var(--borderRadiusBasic);
     padding: 10px;
     font-size: var(--fontSizeMedium);
-    color: var(--colorBlack);
+    color: var(--colorLightBlack);
 }
 
 .selection[is-selected=true] {

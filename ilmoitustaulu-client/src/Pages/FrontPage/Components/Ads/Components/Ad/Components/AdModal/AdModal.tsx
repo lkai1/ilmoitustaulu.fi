@@ -6,19 +6,20 @@ import Modal from '../../../../../../../../lib/CommonComponents/UI/Modal/Modal';
 import IconButton from '../../../../../../../../lib/CommonComponents/Buttons/IconButton/IconButton';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import ImageIcon from '@mui/icons-material/Image';
 
 interface Props {
-	picture: string;
+	images: [{ id: number; image: string; }];
 	type: string;
 	location: string;
-	price: string;
+	price: number;
 	description: string;
 	visibility: boolean;
 	setVisibility: Dispatch<SetStateAction<boolean>>;
 }
 
 const AdModal = ({
-	picture,
+	images,
 	type,
 	location,
 	price,
@@ -52,13 +53,24 @@ const AdModal = ({
 							/>
 						</div>
 					</div>
-					<img className={styles['backgroundImage']} src={picture}></img>
-					<img className={styles['image']} src={picture}></img>
+					<div className={styles['imageContainer']}>
+						{images[0] ?
+							<div>
+								<img className={styles['backgroundImage']}
+									src={images[0].image}></img>
+								<img className={styles['image']}
+									src={images[0].image}></img>
+							</div>
+							:
+							<ImageIcon style={{
+								width: '100%', height: '230px', color: 'var(--colorLightGrey)'
+							}} />
+						}
+					</div>
 				</div>
 				<p className={styles['typeText']}>{type}</p>
 				<div className={styles['infoContainer']}>
 					<div className={styles['typeAndLocationTextContainer']}>
-						
 						<p className={styles['locationText']}>
 							{location}
 						</p>

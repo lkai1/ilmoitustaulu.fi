@@ -47,7 +47,7 @@ const DropDownMenu = ({
 			ref={ref}
 		>
 			{menuButton}
-			<div className={styles['contentContainer']}
+			<div className={styles['childrenContainer']}
 				is-open={isOpen.toString()}
 				style={{
 					left: horizontalPosition,

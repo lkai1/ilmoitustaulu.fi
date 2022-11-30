@@ -2,22 +2,28 @@ import { useState } from 'react';
 import IconButton from '../../../../../lib/CommonComponents/Buttons/IconButton/IconButton';
 import TextInput from '../../../../../lib/CommonComponents/Inputs/TextInput/TextInput';
 import Header from '../Header/Header';
-import styles from './DescriptionSearchInput.module.css';
+import styles from './KeywordSearchInput.module.css';
 import AbcSharpIcon from '@mui/icons-material/AbcSharp';
 import DeselectorList
 	from '../../../../../lib/CommonComponents/Inputs/DeselectorList/DeselectorList';
 import Tooltip from '../../../../../lib/CommonComponents/UI/Tooltip/Tooltip';
+import DropDownMenu from '../../../../../lib/CommonComponents/UI/DropDownMenu/DropDownMenu';
+import { v4 as uuidv4 } from 'uuid';
 
-const DescriptionSearchInput = () => {
+const KeywordSearchInput = () => {
 
 	const [searchWord, setSearchWord] = useState('');
 	const [searchWordList, setSearchWordList] = useState<Array<string | undefined>>([]);
 	const [tooltipVisibility, setTooltipVisibility] = useState(false);
 
+	const keywords = ['Automaatti', 'Sauna', 'Parveke', 'Astianpesukone'];
+
+	//first show startswith then show includes
+
 	return (
 		<div className={styles['main']}>
 			<Header
-				value={'Sanahaku'}
+				value={'Avainsanahaku'}
 			/>
 			<div className={styles['inputContainer']}>
 				<TextInput
@@ -28,11 +34,24 @@ const DescriptionSearchInput = () => {
 					borderRadiusTop={true}
 				/>
 			</div>
+			<DropDownMenu
+				menuButton={<span></span>}
+				verticalPosition={'-210px'}
+				horizontalPosition={'0px'}
+				isOpen={!!searchWord}
+				setIsOpen={() => { return null; }}
+				height={'150px'}
+				width={'280px'}
+			>
+				<div className={styles['keyWordSearchList']}>
+					{keywords.map((kw) => <p key={uuidv4()}>{kw}</p>)}
+				</div>
+			</DropDownMenu>
 			<IconButton
 				labelIcon={AbcSharpIcon}
 				label={'Valitse'}
-				onClickFunction={() => { 
-					if(searchWord) {
+				onClickFunction={() => {
+					if (searchWord) {
 						setSearchWordList([...searchWordList, searchWord]);
 						setSearchWord('');
 					}
@@ -57,7 +76,7 @@ const DescriptionSearchInput = () => {
 							margin: '10px 0px 10px 0px'
 						}}
 					>
-							Valinnat: {searchWordList.length}
+						Valinnat: {searchWordList.length}
 					</p>
 				}
 				hasItems={!!searchWordList.length}
@@ -74,4 +93,4 @@ const DescriptionSearchInput = () => {
 	);
 };
 
-export default DescriptionSearchInput;
+export default KeywordSearchInput;

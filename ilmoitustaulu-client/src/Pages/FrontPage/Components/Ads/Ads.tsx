@@ -1,41 +1,32 @@
+import { useEffect, useState } from 'react';
 import Ad from './Components/Ad/Ad';
 import styles from './Ads.module.css';
 import { v4 as uuidv4 } from 'uuid';
-import placeholder from './placeholder.jpg';
-import placeholder2 from './placeholder2.jpg';
-import placeholder3 from './placeholder3.png';
+import axios from 'axios';
+import { AdType } from '../../../../types/AdTypes';
 
 const Ads = () => {
-	const ads = [0, 0, 0, 0, 0, 0, 0];
+	const [adsState, setAdsState] = useState([]);
+
+	useEffect(() => {
+		axios.get('/api/Ad')
+			.then((response) => {
+				const data = response.data;
+				setAdsState(data);
+			});
+	}, []);
+
 	return (
 		<div className={styles['main']}>
 			<div className={styles['adsContainer']}>
-				{ads.map((ad, i) => {
-					return <Ad key={uuidv4()}
-						picture={i % 3 === 0 ?
-							placeholder3
-							:
-							i % 2 === 0 ?
-								placeholder2
-								:
-								placeholder
-						}
-						type={i % 3 === 0 ?
-							'Palvelut'
-							:
-							i % 2 === 0 ?
-								'Etsitään'
-								:
-								'Myydään'}
-						location={'Uusimaa, Helsinki'}
-						price={'40'}
-						description={i % 3 === 0 ?
-							'Tarjotaan hiustenleikkuuta halvalla.'
-							:
-							i % 2 === 0 ?
-								'Etsitään ruohonleikkaajaa pientä taskurahaa vastaan.'
-								:
-								'Myynnissä kuin uusi soutuvene. Vene on itse valmistettu puusta.'}
+				{adsState.map((ad: AdType) => {
+					return <Ad
+						key={uuidv4()}
+						type={ad.type.name}
+						images={ad.images}
+						location={ad.address.streetAddress}
+						price={ad.price}
+						description={ad.description}
 					/>;
 				})}
 			</div>

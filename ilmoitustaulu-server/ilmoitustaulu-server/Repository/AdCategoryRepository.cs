@@ -6,14 +6,25 @@ namespace ilmoitustaulu_server.Repository
 {
     public class AdCategoryRepository : IAdCategoryRepository
     {
-        private DataContext _context;
+        private readonly DataContext _context;
         public AdCategoryRepository(DataContext context)
         {
             _context = context;
         }
+        public bool DeleteAdCategory(AdCategory adCategory)
+        {
+            _context.Remove(adCategory);
+            return Save();
+        }
         public bool AdCategoryExists(int id)
         {
             return _context.AdCategories.Any(ac => ac.Id == id);
+        }
+
+        public bool CreateAdCategory(AdCategory adCategory)
+        {
+            _context.Add(adCategory);
+            return Save();
         }
 
         public ICollection<AdCategory> GetAdCategories()
@@ -26,10 +37,9 @@ namespace ilmoitustaulu_server.Repository
             return _context.AdCategories.Where(ac => ac.Id == id).FirstOrDefault();
         }
 
-        public ICollection<Ad> GetAdsByAdCategory(int adCategoryId)
-        {   //for many-to-many relationship
-            //return _context.AdCategories.Where(ac => ac.Id == adCategoryId).Select(a => a.Ads).ToList();
-            return _context.Ads.Where(a => a.Category.Id == adCategoryId).ToList();
+        public bool Save()
+        {
+            return _context.SaveChanges() > 0;
         }
     }
 }

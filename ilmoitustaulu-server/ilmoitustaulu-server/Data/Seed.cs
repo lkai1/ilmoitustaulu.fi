@@ -1,5 +1,6 @@
 ﻿using ilmoitustaulu_server.Data;
 using ilmoitustaulu_server.Models;
+using System.Security.Cryptography;
 
 namespace ilmoitustaulu_server.Seed
 {
@@ -8,18 +9,30 @@ namespace ilmoitustaulu_server.Seed
         private readonly DataContext dataContext;
         public Seed(DataContext context)
         {
-            this.dataContext = context;
+            dataContext = context;
+        }
+
+        //move into utils/helpers folder
+        private void CreateHash(string password, out byte[] hash, out byte[] salt)
+        {
+            using (var hmac = new HMACSHA512())
+            {
+                salt = hmac.Key;
+                hash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+            }
         }
         public void SeedDataContext()
         {
             if (!dataContext.Users.Any())
             {
+                CreateHash("password", out byte[] hash, out byte[] salt);
                 var users = new List<User>()
                 {
                     new User()
                     {
-                        Salt = "Salt",
-                        Hash = "Hash",
+                        //fix
+                        Salt = salt,
+                        Hash = hash,
                         Contact = new UserContact()
                         {
                             Email = "kai-le@outlook.com",

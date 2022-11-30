@@ -1,10 +1,11 @@
 import styles from './RegisterMenu.module.css';
 import LoginIcon from '@mui/icons-material/Login';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import TextInput from '../../../../../lib/CommonComponents/Inputs/TextInput/TextInput';
 import IconButton from '../../../../../lib/CommonComponents/Buttons/IconButton/IconButton';
 import TextButton from '../../../../../lib/CommonComponents/Buttons/TextButton/TextButton';
 import ErrorMessage from '../../../../../lib/CommonComponents/UI/ErrorMessage/ErrorMessage';
+import { AuthContext } from '../../../../../Contexts/AuthContext';
 
 interface Props {
 	setShowLoginMenu: () => void;
@@ -13,8 +14,10 @@ interface Props {
 const RegisterMenu = ({
 	setShowLoginMenu
 }: Props) => {
-	//email username or both? is username even needed?
-	const [username, setUsername] = useState('');
+
+	const authContext = useContext(AuthContext);
+
+	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [passwordVerify, setPasswordVerify] = useState('');
 	const [city, setCity] = useState('');
@@ -29,8 +32,8 @@ const RegisterMenu = ({
 					margin={'6px'}
 				/>
 				<TextInput
-					value={username}
-					setValue={setUsername}
+					value={email}
+					setValue={setEmail}
 					placeHolder={'sähköposti'}
 					width={'100%'}
 					borderRadiusTop={true}
@@ -60,9 +63,12 @@ const RegisterMenu = ({
 				labelColor={'var(--colorWhite)'}
 				labelIcon={LoginIcon}
 				onClickFunction={() => {
-					if (!username || !password || !passwordVerify || !city) {
+					if (!email || !password || !passwordVerify || !city) {
 						setErrorMessage('Täytä kaikki kentät');
 					}
+					if (password === passwordVerify) {
+						authContext?.register(email, password, city);
+					} else setErrorMessage('Salasanat eivät täsmää');
 				}}
 				buttonColor={'var(--colorBrightBlue)'}
 				labelFontSize={'var(--fontSizeMedium)'}

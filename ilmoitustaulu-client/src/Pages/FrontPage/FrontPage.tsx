@@ -7,7 +7,7 @@ import PageSelector from './Components/PageSelector/PageSelector';
 const Frontpage = () => {
 	return (
 		<div className={styles['main']}>
-			{/* <Welcome /> */}
+			<Welcome />
 			<Ads />
 			<PageSelector />
 		</div>

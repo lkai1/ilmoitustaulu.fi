@@ -5,17 +5,18 @@ import OpenInFullIcon from '@mui/icons-material/OpenInFull';
 import { useState } from 'react';
 import IconButton from '../../../../../../lib/CommonComponents/Buttons/IconButton/IconButton';
 import AdModal from './Components/AdModal/AdModal';
+import ImageIcon from '@mui/icons-material/Image';
 
 interface Props {
-	picture: string;
+	images: [{ id: number; image: string; }];
 	type: string;
 	location: string;
-	price: string;
+	price: number;
 	description: string;
 }
 
 const Ad = ({
-	picture,
+	images,
 	type,
 	location,
 	price,
@@ -27,8 +28,17 @@ const Ad = ({
 	return (
 		<div className={styles['main']}>
 			<div className={styles['imageContainer']}>
-				<img className={styles['backgroundImage']} src={picture}></img>
-				<img className={styles['image']} src={picture}></img>
+				{images[0] ?
+					<div>
+						<img className={styles['backgroundImage']} src={images[0].image}></img>
+						<img className={styles['image']} src={images[0].image}></img>
+					</div>
+					:
+					<ImageIcon style={{
+						padding: 0, margin: 0,
+						width: '100%', height: '100%', color: 'var(--colorLightGrey)'
+					}} />
+				}
 			</div>
 			<div className={styles['infoContainer']}>
 				<p className={styles['typeText']}>{type}</p>
@@ -40,11 +50,7 @@ const Ad = ({
 			<div className={styles['descriptionTextContainer']}>
 				<div className={styles['descriptionTextFader']}></div>
 				<p className={styles['descriptionText']}>
-					{description}dsfdsfijdshyufkodskfijuds
-					dsfdsfijdshyufkodskfijuds
-					dsfdsfijdshyufkodskfijudsdsfdsfijdshyufkodskfijudsdsfdsfijdshyufkodskfijuds
-					dsfdsfijdshyufkodskfijudsdsfdsfijdshyufkodskfijudsdsfdsfijdshyufkodskfijuds
-					dsfdsfijdshyufkodskfijudsdsfdsfijdshyufkodskfijuds
+					{description}
 				</p>
 			</div>
 			<div className={styles['buttonsContainer']}>
@@ -75,7 +81,7 @@ const Ad = ({
 				<div className={styles['rightButtons']}>
 					<IconButton
 						labelIcon={OpenInFullIcon}
-						labelColor={'var(--colorBlack)'}
+						labelColor={'var(--colorLightBlack)'}
 						onClickFunction={() => { setIsModalOpen(!isModalOpen); }}
 						buttonColor={'var(--colorWhite)'}
 						border={'1px solid var(--colorLightGrey)'}
@@ -87,7 +93,7 @@ const Ad = ({
 				</div>
 			</div>
 			<AdModal
-				picture={picture}
+				images={images}
 				type={type}
 				location={location}
 				price={price}

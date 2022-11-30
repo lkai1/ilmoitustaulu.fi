@@ -1,11 +1,9 @@
 .main {
     padding: 20px;
     background-color: var(--colorVeryLightGrey);
-    /* box-shadow: inset var(--shadowBasic); */
 }
 
 .adsContainer {
-    /* find out how to create border between grid items */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(252px, max-content));
     justify-content: center;

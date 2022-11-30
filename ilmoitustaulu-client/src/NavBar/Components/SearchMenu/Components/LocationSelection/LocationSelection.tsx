@@ -119,18 +119,6 @@ const LocationSelection = () => {
 					selectedView={selectedView}
 					setSelectedView={setSelectedView}
 				/>
-				{/* <DeselectorList
-					label='Maakunnat'
-					values={selectedProvinces}
-					setValues={setSelectedProvinces}
-					valueColor={'black'}
-				/>
-				<DeselectorList
-					label='Kaupungit'
-					values={selectedCities}
-					setValues={setSelectedCities}
-					valueColor={'black'}
-				/> */}
 				<Tooltip
 					horizontalPosition={'50px'}
 					verticalPosition={'0px'}

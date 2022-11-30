@@ -8,22 +8,24 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  color: var(--colorBlack);
+  color: var(--colorLightBlack);
+  background-color: var(--colorVeryLightGrey);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 :root {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   /* color */
   --colorPastelBlue: rgb(96, 160, 255);
   --colorBrightBlue: rgb(35, 123, 255);
   --colorPastelYellow: rgb(255, 221, 83);
-  --colorOrange: coral;
+  --colorOrange: rgb(255, 127, 80);
   --colorPastelRed: rgb(255, 65, 87);
   --colorVeryLightGrey: rgb(240, 240, 240);
   --colorLightGrey: rgb(220, 220, 220);
   --colorGrey: rgb(150, 150, 150);
   --colorDarkGrey: rgb(100, 100, 100);
-  --colorBlack: rgb(45, 45, 45);
+  --colorBlack: rgb(20, 20, 20);
+  --colorLightBlack: rgb(45, 45, 45);
   --colorWhite: rgb(255, 255, 255);
   --shadowBasic: 0 0 10px rgba(130, 130, 130, 0.5);
   --shadowBasicLight: 0 0 5px rgb(200, 200, 200);

@@ -8,8 +8,18 @@ namespace ilmoitustaulu_server.Helper
     {
         public MappingProfiles()
         {
-            CreateMap<Ad, AdDTO>();
-            CreateMap<AdCategory, AdCategoryDTO>();
+            CreateMap<Ad, AdGetDTO>();
+            CreateMap<AdPostDTO, Ad>();
+            CreateMap<AdType, AdTypeGetDTO>();
+            CreateMap<AdTypePostDTO, Ad>();
+            CreateMap<AdCategory, AdCategoryGetDTO>();
+            CreateMap<AdCategoryPostDTO, AdCategory>();
+            CreateMap<AdContact, AdContactGetDTO>();
+            CreateMap<AdContactPostDTO, AdContact>();
+            CreateMap<AdAddress, AdAddressGetDTO>();
+            CreateMap<AdAddressPostDTO, AdAddress>();
+            CreateMap<AdImage, AdImageGetDTO>();
+            CreateMap<AdImagePostDTO, AdImage>();
         }
     }
 }

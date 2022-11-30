@@ -11,7 +11,7 @@ import OpenInFullIcon from '@mui/icons-material/OpenInFull';
 import Modal from '../../../lib/CommonComponents/UI/Modal/Modal';
 import IconButton from '../../../lib/CommonComponents/Buttons/IconButton/IconButton';
 import DropDownMenu from '../../../lib/CommonComponents/UI/DropDownMenu/DropDownMenu';
-import DescriptionSearchInput from './Components/DescriptionSearchInput/DescriptionSearchInput';
+import KeywordSearchInput from './Components/KeywordSearchInput/KeywordSearchInput';
 
 const SearchMenu = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +42,7 @@ const SearchMenu = () => {
 						<div>
 							<TypeSelection />
 							<PriceInput />
-							<DescriptionSearchInput />
+							<KeywordSearchInput />
 						</div>
 						<CategorySelection />
 						<LocationSelection />
@@ -66,7 +66,7 @@ const SearchMenu = () => {
 						</div>
 					</div>
 				</DropDownMenu>
-				:
+				: 
 				<div>
 					<IconButton
 						label={'Ilmoitusten haku'}
@@ -85,6 +85,7 @@ const SearchMenu = () => {
 							<TypeSelection />
 							<CategorySelection />
 							<LocationSelection />
+							<KeywordSearchInput />
 							<PriceInput />
 							<IconButton
 								label={'Hae'}

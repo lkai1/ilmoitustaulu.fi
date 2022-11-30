@@ -1,7 +1,6 @@
 import styles from './Welcome.module.css';
 
 const Welcome = () => {
-	//maybe replace this with an advertisement?
 	return (
 		<div className={styles['main']}>
 			<div className={styles['logoContainer']}>

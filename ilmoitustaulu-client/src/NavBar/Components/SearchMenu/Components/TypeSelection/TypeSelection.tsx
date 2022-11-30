@@ -31,7 +31,7 @@ const TypeSelection = () => {
 					values={types}
 					selectedValues={selectedTypes}
 					setSelectedValues={setSelectedTypes}
-					checkboxColor={'var(--colorPastelRed)'}
+					checkboxColor={'var(--colorBrightBlue)'}
 				/>
 			</div>
 		</div>

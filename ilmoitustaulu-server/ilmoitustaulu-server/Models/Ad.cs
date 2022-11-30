@@ -2,8 +2,6 @@
 {
     public class Ad
     {
-        //[Comment("Ads managed on the website")]
-        //[Required]
         public int Id { get; set; }
         public int Price { get; set; }
         public string Description { get; set; }

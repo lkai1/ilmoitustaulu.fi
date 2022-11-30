@@ -35,6 +35,6 @@
 .logoText {
     margin: 0;
     font-size: var(--fontSizeLarger);
-    color: var(--colorBlack);
+    color: var(--colorLightBlack);
     font-weight: bold;
 }
